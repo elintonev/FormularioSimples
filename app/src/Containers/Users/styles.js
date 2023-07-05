@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import Background1 from "./Assets/Background1.svg";
+import { Link } from "react-router-dom";
+import Background2 from "../../Assets/Background2.jpg";
 
 export const Container = styled.div`
-  background: url("${Background1}");
+  background: url("${Background2}");
   background-size: cover;
 
   height: 100vh;
@@ -25,6 +26,7 @@ export const ContainerItens = styled.div`
     rgba(255, 255, 255, 0.15) 100%
   );
   border-radius: 61px 61px 0px 0px;
+  backdrop-filter: blur(45px);
 
   padding: 50px 36px;
 
@@ -44,61 +46,23 @@ export const H1 = styled.h1`
   margin-bottom: 80px;
 `;
 
-export const InputLabel = styled.p`
-  letter-spacing: -0.408px;
-
-  color: #eeeeee;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-
-  margin-left: 25px;
-`;
-
-export const Input = styled.input`
-  width: 342px;
-  height: 58px;
-
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 14px;
-  border: none;
-  outline: none;
-
-  padding-left: 25px;
-  margin-bottom: 34px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-
-  color: #ffffff;
-`;
-
-export const Button = styled.button`
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-
-  width: 342px;
-  height: 74px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 28px;
-  color: #ffffff;
-
-  border: none;
-
-  cursor: pointer;
-
-  display: flex;
+export const Button = styled(Link)`
   align-items: center;
-  justify-content: center;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
   gap: 25px;
+  height: 74px;
+  justify-content: center;
+  line-height: 28px;
+  margin-top: 120px;
+  width: 342px;
 
   &:hover {
     opacity: 0.6;
@@ -106,6 +70,10 @@ export const Button = styled.button`
 
   &:active {
     opacity: 0.3;
+  }
+
+  img {
+    transform: rotateY(180deg);
   }
 `;
 
